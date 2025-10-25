@@ -1,9 +1,14 @@
 import axios from 'axios';
 
-const API_URL = "https://psiborg.onrender.com/api";
+let apiUrl;
+if (import.meta.env.VITE_API_MODE === "production") {
+  apiUrl = import.meta.env.VITE_API_PROD_URL;
+} else {
+  apiUrl = import.meta.env.VITE_API_LOCAL_URL;
+}
 
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: apiUrl,
   headers: {
     'Content-Type': 'application/json',
   },
