@@ -30,7 +30,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
-  "https://psiborg.vercel.app",
+  "https://exquisite-eclair-850129.netlify.app",
 ];
 
 app.use(cors({
